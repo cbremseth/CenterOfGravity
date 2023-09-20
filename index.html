@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>Center of Gravity</title>
+</head>
+
+<body>
+    <main>
+        <h1>Center of Gravity Calculator</h1>
+        <section>
+            <h2>What is this?</h2>
+            <p>Enter some points and This tool helps you find the midpoint or geometric median of multiple geographical
+                points. Whether you're trying to find
+                the most centralized location for a new store, plotting emergency service locations, or simply curious
+                about
+                geographical data, this tool offers a simple way to analyze points on a map.</p>
+        </section>
+        <section>
+            <form id="pointsForm">
+                <div id="pointsContainer"></div>
+                <div id="input-fields">
+                    Latitude: <input type="text" id="newLat">
+                    Longitude: <input type="text" id="newLng">
+                    <button type="button" id="addPointButton">Add</button>
+                </div>
+                <button type="button" id="calculateButton">Calculate</button>
+                <button type="button" id="resetButton">Reset</button>
+                <div id="resultField"></div>
+            </form>
+            <div id="map"></div>
+        </section>
+
+        <section>
+            <h2>How do I use it?</h2>
+            <ol>
+                <li><strong>Adding Points</strong>: You have two ways to add points for analysis.
+                    <ul>
+                        <li><strong>Click on the Map</strong>: Simply click anywhere on the map to add a point. A marker
+                            will appear on
+                            the map, and its coordinates
+                            will be listed below.</li>
+                        <li><strong>Manually Enter Coordinates</strong>: Use the provided input fields to manually enter
+                            the latitude and
+                            longitude of a point, then
+                            click the "Add" button.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Deleting points</strong>: You have two ways to remove existing points.
+                    <ul>
+                        <li><strong>From the Map</strong>: Click on a marker to remove it from the map and the list.
+                        </li>
+                        <li><strong>From the List</strong>: Use the "Delete" button next to the coordinates in the list
+                            to remove both
+                            the marker and the entry.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Calculate</strong>: Once you've added your points, click the "Calculate" button to find the
+                    midpoint or geometric median,
+                    depending on the number of points you've entered. The result will be displayed both as a marker on
+                    the map and as
+                    coordinates below the button.
+                </li>
+                <li>
+                    <strong>Reset</strong>: To start over, click the "Reset" button. This will remove all markers and
+                    coordinate entries.
+                </li>
+            </ol>
+        </section>
+
+
+        <section>
+            <h2>How does it work?</h2>
+            <ul>
+                <li><strong>Midpoint Calculation</strong>: When you have exactly two points, the tool calculates the
+                    midpoint, which is simply the average of
+                    the latitude and longitude coordinates of the two points.</li>
+                <li><strong>Geometric Median</strong>: For three or more points, the tool calculates the geometric
+                    median. The geometric median minimizes the sum of distances
+                    to all other points. This calculation uses an iterative algorithm to converge towards the most
+                    centralized point.</li>
+            </ul>
+        </section>
+    </main>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
