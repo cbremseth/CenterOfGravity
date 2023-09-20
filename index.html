@@ -25,12 +25,18 @@
             <form id="pointsForm">
                 <div id="pointsContainer"></div>
                 <div id="input-fields">
-                    Latitude: <input type="text" id="newLat">
-                    Longitude: <input type="text" id="newLng">
-                    <button type="button" id="addPointButton">Add</button>
+                    <div>
+                        Latitude: <input type="text" class="lat-input" id="newLat">
+                        Longitude: <input type="text" class="lng-input" id="newLng">
+                        <button type="button" id="addPointButton">Add</button>
+                    </div>
+
                 </div>
-                <button type="button" id="calculateButton">Calculate</button>
-                <button type="button" id="resetButton">Reset</button>
+                <div id="form-buttons">
+                    <button type="button" id="calculateButton">Calculate</button>
+                    <button type="button" id="resetButton">Reset</button>
+                </div>
+
                 <div id="resultField"></div>
             </form>
             <div id="map"></div>

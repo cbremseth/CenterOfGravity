@@ -3,29 +3,55 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 50%;
+    max-width: 800px;
     margin: 0 auto;
-}
-
-#map {
-    height: 500px;
-}
-
-#input-fields {
-    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    align-items: center;
 }
 
 section {
     margin-bottom: 20px;
+    width: 100%;
 }
+
 
 h1, h2 {
     text-align: center;
+}
+
+#map {
+    height: 500px;
+
+}
+
+#input-fields {
+    display: flex;
+    align-items: center;
+    /* Aligns items vertically in the center */
+    justify-content: flex-start;
+    /* Aligns items horizontally at the start */
+    gap: 5px
+}
+
+.lat-input,
+.lng-input {
+    flex-grow: 1;
+    /* Allows the input fields to grow and shrink as needed */
+    min-width: 20px;
+    /* Sets a minimum width */
+    width: 90px;
+}
+
+
+#form-buttons {
+    display: flex;
+    justify-content: center;
+    
+    gap: 10px
 }
