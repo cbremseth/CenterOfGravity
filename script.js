@@ -191,8 +191,11 @@ function resetAll() {
   // Clear the markers arrays
   markers = [];
   leafletMarkers = [];
-  resultMarker.remove();
-  resultMarker = null;
+  if (resultMarker) {
+    resultMarker.remove();
+    resultMarker = null;
+  }
+
   // Clear the form
   const pointsContainer = document.getElementById("pointsContainer");
   while (pointsContainer.firstChild) {

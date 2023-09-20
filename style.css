@@ -39,6 +39,8 @@ h1, h2 {
     gap: 5px
 }
 
+#newLat,
+#newLng,
 .lat-input,
 .lng-input {
     flex-grow: 1;
