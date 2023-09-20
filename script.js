@@ -171,7 +171,7 @@ function calculateFromForm() {
     // Display the result in the resultField
     document.getElementById(
       "resultField"
-    ).innerHTML = `<p>Result Point: Latitude ${result[0]}, Longitude ${result[1]}</p> <a target="_blank" href="https://www.google.com/maps/search/Things+to+do/@${result[0]},${result[1]},12z/data=!3m1!4b1?entry=ttu">Looking for things to do?</a>`;
+    ).innerHTML = `<p>Result Point: Latitude ${result[0]}, Longitude ${result[1]}</p> <a target="_blank" href="https://www.google.com/search?q=${result[0]}%2C+${result[1]}">Looking for things to do?</a>`;
   }
 }
 // Function to add a point from the input fields
